@@ -22,6 +22,7 @@
 		6B67E60C1FF4E1AC009699A8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B67E60B1FF4E1AC009699A8 /* Extensions.swift */; };
 		6B8AE6981ECE793600CE27A8 /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5F7C71EC3F3E4007A502E /* KRActivityIndicatorView.framework */; };
 		6BD5F7C81EC3F3E4007A502E /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5F7C71EC3F3E4007A502E /* KRActivityIndicatorView.framework */; };
+		E0F6A04A273D32EC00DA4BDE /* KRProgressHUDInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F6A049273D32EC00DA4BDE /* KRProgressHUDInstance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		6B08733B2165B5870056A74B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		6B67E60B1FF4E1AC009699A8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6BD5F7C71EC3F3E4007A502E /* KRActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KRActivityIndicatorView.framework; path = Carthage/Build/iOS/KRActivityIndicatorView.framework; sourceTree = "<group>"; };
+		E0F6A049273D32EC00DA4BDE /* KRProgressHUDInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KRProgressHUDInstance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				4BA70C401D02F2ED009EB743 /* KRProgressHUDIconType.swift */,
 				4B7576D71D1BC838003FF258 /* KRProgressHUDViewController.swift */,
 				6B67E60B1FF4E1AC009699A8 /* Extensions.swift */,
+				E0F6A049273D32EC00DA4BDE /* KRProgressHUDInstance.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0F6A04A273D32EC00DA4BDE /* KRProgressHUDInstance.swift in Sources */,
 				6B67E60C1FF4E1AC009699A8 /* Extensions.swift in Sources */,
 				4BA70C441D02F2ED009EB743 /* KRProgressHUDIconType.swift in Sources */,
 				4B7576D61D1BC6AB003FF258 /* InnerKRProgressHUD.swift in Sources */,

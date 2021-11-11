@@ -16,7 +16,7 @@ private let messageLabelMinWidth = CGFloat(120)
 
 // MARK: - Internal actions --------------------------
 
-extension KRProgressHUD {
+extension KRProgressHUDInstance {
     func configureProgressHUDView() {
         window.windowLevel = .normal
         hudViewController.view.translatesAutoresizingMaskIntoConstraints = false
@@ -114,7 +114,7 @@ extension KRProgressHUD {
 
 // MARK: - Private actions --------------------------
 
-extension KRProgressHUD {
+extension KRProgressHUDInstance {
     func setUpConstraints() {
         hudViewCenterYConstraint = NSLayoutConstraint(item: hudView, attribute: .centerY, toItem: hudViewController.view, constant: viewOffset ?? viewAppearance.viewOffset)
         hudViewSideMarginConstraints += [
@@ -160,7 +160,7 @@ extension KRProgressHUD {
 
     func registerDismissHandler() {
         dismissHandler = DispatchWorkItem { [unowned self] in
-            KRProgressHUD.dismiss()
+            self.dismiss()
             _ = self.cancelCurrentDismissHandler()
         }
         let duration = DispatchTime.now() + (self.duration ?? viewAppearance.duration)
@@ -168,7 +168,7 @@ extension KRProgressHUD {
     }
 
     func fadeInView(completion: CompletionHandler?) {
-        if KRProgressHUD.isVisible {
+        if self.isVisible {
             hudView.alpha = 0
         } else {
             hudViewController.view.alpha = 0
@@ -190,7 +190,7 @@ extension KRProgressHUD {
             }
         }
 
-        KRProgressHUD.isVisible = true
+        self.isVisible = true
         UIView.animate(withDuration: fadeTime, animations: { [unowned self] in
             self.hudView.alpha = 1
             self.hudViewController.view.alpha = 1
@@ -212,7 +212,7 @@ extension KRProgressHUD {
                 self.window.rootViewController = self.hudViewController
             }
             self.activityIndicatorView.stopAnimating()
-            KRProgressHUD.isVisible = false
+            self.isVisible = false
             completion?()
         })
     }
