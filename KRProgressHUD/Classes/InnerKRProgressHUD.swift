@@ -179,6 +179,7 @@ extension KRProgressHUDInstance {
                 setConstraintsToPresentingVC()
                 presentingVC.didMove(toParent: hudViewController)
             } else {
+#if !APP_EXTENSION
                 if #available(iOS 13.0, *) {
                     if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
                         window.windowScene = windowScene
@@ -186,6 +187,7 @@ extension KRProgressHUDInstance {
                         print("UIWindowScene not found")
                     }
                 }
+#endif
                 window.makeKeyAndVisible()
             }
         }

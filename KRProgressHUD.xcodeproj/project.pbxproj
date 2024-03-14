@@ -23,6 +23,7 @@
 		6B8AE6981ECE793600CE27A8 /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5F7C71EC3F3E4007A502E /* KRActivityIndicatorView.framework */; };
 		6BD5F7C81EC3F3E4007A502E /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD5F7C71EC3F3E4007A502E /* KRActivityIndicatorView.framework */; };
 		E0F6A04A273D32EC00DA4BDE /* KRProgressHUDInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F6A049273D32EC00DA4BDE /* KRProgressHUDInstance.swift */; };
+		E0F6A04B273D381400DA4BDE /* KRProgressHUDInstance.swift in Headers */ = {isa = PBXBuildFile; fileRef = E0F6A049273D32EC00DA4BDE /* KRProgressHUDInstance.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 			files = (
 				4BA70C341D02F28D009EB743 /* KRProgressHUD.h in Headers */,
 				4B5D62AF1D8411730027D21E /* KRProgressHUD.swift in Headers */,
+				E0F6A04B273D381400DA4BDE /* KRProgressHUDInstance.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

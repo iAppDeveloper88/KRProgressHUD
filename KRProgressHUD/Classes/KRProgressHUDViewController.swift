@@ -15,6 +15,7 @@ class KRProgressHUDViewController: UIViewController {
         super.viewDidLoad()
     }
 
+#if !APP_EXTENSION
     override var preferredStatusBarStyle: UIStatusBarStyle {
         guard let topVC = UIApplication.shared.topViewController() else { return statusBarStyle }
         if !topVC.isKind(of: KRProgressHUDViewController.self) {
@@ -30,4 +31,6 @@ class KRProgressHUDViewController: UIViewController {
         }
         return statusBarHidden
     }
+#endif
+    
 }
