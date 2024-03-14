@@ -11,16 +11,17 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '9.0'
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.3'
+  s.default_subspec  = 'App'
 
   s.source       = { :git => "https://github.com/krimpedance/KRProgressHUD.git", :tag => s.version.to_s }
   s.source_files = "KRProgressHUD/**/*.swift"
 
   s.dependency "KRActivityIndicatorView", "3.0.7"
 
-  spec.subspec 'App' do |app|
+  s.subspec 'App' do |app|
   end
 
-  spec.subspec 'AppExtension' do |ext|
+  s.subspec 'AppExtension' do |ext|
     # For app extensions, disabling code paths using unavailable API
     ext.pod_target_xcconfig = {
       'SWIFT_ACTIVE_COMPILATION_CONDITIONS' => 'APP_EXTENSION',
